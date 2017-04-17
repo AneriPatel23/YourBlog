@@ -1,0 +1,10 @@
+<h2>This is your blogging website!</h2>
+	<div><b><a href="/blogs/new">Create new blog: </a></b></div>
+<% blogs.forEach(function(blog){ %>
+
+	<div><h3><%= blog.title%></h3></div>
+	<div><img src="<%= blog.image%>" width="300px" height="300px"></div>
+	<div><%= blog.body%></div>
+	<div><%= blog.date.toDateString()%></div>
+<div><a href="/blogs/<%=blog._id%>">Read more....</a></div>
+<% })%>

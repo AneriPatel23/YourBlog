@@ -1,0 +1,10 @@
+<div>  <h3><%= blog.title%></h3></div>
+	<div><img src="<%=blog.image%>" width="300px" height="300px"></div>
+	<div><%= blog.body%></div>
+	<div><%= blog.date.toDateString()%></div>
+	<div><a href="/blogs/<%=blog._id%>/edit">Edit blog</a></div>
+	<form action="/blogs/<%=blog._id%>?_method=DELETE" method="POST" >
+		<button type="submit">delete blog</button>
+	</form>
+	
+	
